@@ -28,7 +28,7 @@ public class Screenshot {
             CreateFolder.createFolderReport(PATH_SCREENSHOT);
             File scrshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             String screenshot = PATH_SCREENSHOT +File.separator + 
-                    "Image_" + DateTime.getDateTimeFormatScreenshot();
+                    "Image_" + DateTime.getDateTimeFormatScreenshot() + ".png";
             FileUtils.copyFile(scrshot, new File(screenshot));
             return MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build();
             

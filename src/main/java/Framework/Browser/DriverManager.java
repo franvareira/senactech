@@ -18,7 +18,7 @@ public class DriverManager {
         
         case CHROME:
             
-           WebDriverManager.chromedriver().proxy("https://nswg.corp.banrisul.com.br:9090").setup();
+           WebDriverManager.chromedriver().setup();
            ChromeOptions options = new ChromeOptions();
            options.addArguments("--start-maximized");
            options.addArguments("--incognito");
@@ -27,7 +27,7 @@ public class DriverManager {
            
         case EDGE:
            
-            WebDriverManager.edgedriver().proxy("https://nswg.corp.banrisul.com.br:9090").setup();
+            WebDriverManager.edgedriver().setup();
             EdgeOptions edgeOptions = new EdgeOptions();
             edgeOptions.addArguments("--start-maximized");
             edgeOptions.addArguments("--incognito");
@@ -36,13 +36,13 @@ public class DriverManager {
             
         case FIREFOX:
             
-            WebDriverManager.firefoxdriver().proxy("https://nswg.corp.banrisul.com.br:9090").setup();
+            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             break;
             
         case HEADLESS:
             
-            WebDriverManager.chromedriver().proxy("https://nswg.corp.banrisul.com.br:9090").setup();
+            WebDriverManager.chromedriver().setup();
             ChromeOptions headlessOptions = new ChromeOptions();
             headlessOptions.addArguments("--headless");
             headlessOptions.addArguments("--window-size(1366,768)");
